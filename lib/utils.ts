@@ -12,3 +12,17 @@ export function formatDate(date: string){
     year: 'numeric'
   })
 }
+
+export function formatNumber(totalViews: number){
+  
+  if (!totalViews) return ('0 View')
+  if (totalViews <= 1) {
+    return (`${totalViews} View`) }
+    else{
+    return (`${totalViews} Views`)
+  }
+}
+
+export function parseServerActionResponse<T>(response: T){
+  return JSON.parse(JSON.stringify(response));
+}
